@@ -20,9 +20,9 @@ const closeMenu = () => {
 
 const openSubMenu = (event) => {
   event.preventDefault();
-  const target = event.target;
-  const itemList = target.closest(".catalog-list__item");
+  const itemList = event.target.closest(".catalog-list__item");
   if (itemList) {
+    subCatalogHeader.innerHTML = itemList.innerHTML;
     subCatalog.classList.add("subopen");
   }
 };
